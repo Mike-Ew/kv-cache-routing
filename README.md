@@ -38,10 +38,6 @@ This project evaluates six gateway-level routing policies for multi-instance vLL
 ```
 kv-cache-routing/
 ├── README.md
-├── docs/
-│   ├── project_plan_final.md    # Full project plan with code skeletons
-│   ├── project_proposal.md      # Assignment submission (source)
-│   └── project_proposal.pdf     # Assignment submission (PDF)
 └── paper/
     └── figures/
         └── system_architecture.png
