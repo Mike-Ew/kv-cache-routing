@@ -1,1 +1,33 @@
-docs/
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+*.egg
+
+# --- IDE / Local tools ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+.claude/
+
+# --- Data / Results (large, generated) ---
+results/
+*.jsonl
+data/
+
+# --- Reference PDFs (copyrighted) ---
+references/papers/*.pdf
+
+# --- Docs: only ignore generated / binary files ---
+docs/project_proposal.pdf
+docs/course_rubric.pdf
+
+# --- Paper build artifacts ---
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz

@@ -1,14 +1,15 @@
-# Cache-Aware Routing for Multi-Instance LLM Serving
+# Cache-Aware Agentic Routing for Multi-Instance LLM Serving
 
 A reproducible evaluation of locality vs. load balance tradeoffs in gateway-level routing for distributed LLM serving.
+Submitted for **COSC 6375: Graduate Research in Agentic AI (Track A)**.
 
-![System Architecture](paper/figures/system_architecture.png)
+![System Architecture](deliverables/paper/figures/system_architecture.png)
 
 ## About
 
 When serving an LLM to many users, it is common to run multiple model instances behind a load balancer. Each instance keeps its own KV cache of previous computations. Routing a request to an instance that already has relevant data cached makes the response much faster. However, most load balancers ignore this cache and just spread requests evenly.
 
-This project evaluates six gateway-level routing policies for multi-instance vLLM serving and studies the tradeoff between cache reuse and load balance.
+This project implements an **Agentic Router using LangGraph** that intelligently routes requests based on real-time instance state and cache content. It evaluates six routing policies for multi-instance vLLM serving and studies the tradeoff between cache reuse and load balance.
 
 ## Routing Policies
 
@@ -31,17 +32,47 @@ This project evaluates six gateway-level routing policies for multi-instance vLL
 
 - 1x NVIDIA RTX 5080 (16 GB VRAM)
 - 2x vLLM instances running Llama-3.2-3B-Instruct at 0.45 VRAM utilization each
-- FastAPI router/gateway with pluggable policy engine
+- **LangGraph**-based router/gateway with pluggable policy engine
 
 ## Project Structure
 
 ```
 kv-cache-routing/
 ├── README.md
-└── paper/
-    └── figures/
-        └── system_architecture.png
+├── router/                 # LangGraph Agentic Router
+│   ├── graph.py            #   StateGraph definition
+│   ├── nodes.py            #   Graph nodes (scrape, cache, route, forward)
+│   ├── policies.py         #   Pluggable policy implementations
+│   └── ...
+├── workloads/              # Workload generators (ShareGPT, RAG)
+├── simulator/              # Trace-driven scaling simulator
+├── analysis/               # Plotting & metrics parsing scripts
+├── scripts/                # Launch helpers (vLLM, experiments)
+├── configs/                # Per-experiment YAML configs
+├── docs/                   # Project plan, proposal, AI guides
+│   ├── project_plan_final.md
+│   ├── project_proposal.md
+│   ├── AI_SHARED.md
+│   ├── AI_CODEX.md
+│   ├── AI_CLAUDE.md
+│   └── AI_GEMINI.md
+├── paper/                  # LaTeX paper (NeurIPS format) + figures
+│   └── figures/
+├── presentation/           # Marp slide deck + notes
+│   ├── deck.md
+│   ├── speaker_notes.md
+│   └── timeline.md
+└── references/             # Literature PDFs + reading notes
+    ├── papers/
+    └── notes.md
 ```
+
+## Collaboration (Gemini + Claude + Codex)
+
+- Shared workflow and handoff format: `docs/AI_SHARED.md`
+- Codex (implementation/integration): `docs/AI_CODEX.md`
+- Claude (methodology/writing/claims): `docs/AI_CLAUDE.md`
+- Gemini (workloads/analysis/visuals): `docs/AI_GEMINI.md`
 
 ## Metrics
 
