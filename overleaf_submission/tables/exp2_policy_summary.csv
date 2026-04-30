@@ -1,0 +1,7 @@
+policy,policy_label,n_errors_mean,throughput_rps_mean,client_p50_ms_mean,client_p95_ms_mean,client_p99_ms_mean,client_mean_ms_mean,backend_p50_ms_mean,backend_p95_ms_mean,ttft_ms_mean,cache_hit_pct_mean,load_imbalance_ratio_mean,n_errors_std,throughput_rps_std,client_p50_ms_std,client_p95_ms_std,client_p99_ms_std,client_mean_ms_std,backend_p50_ms_std,backend_p95_ms_std,ttft_ms_std,cache_hit_pct_std,load_imbalance_ratio_std
+round_robin,Round-Robin,0.0,2.843,1404.8,2802.9,5952.6,1480.833,,,399.633,96.767,1.0,0.0,0.302,124.916,169.097,1766.462,121.477,0.0,0.0,14.792,0.012,0.0
+jsq,JSQ,0.0,2.627,1341.467,3548.7,5901.8,1595.567,,,383.787,96.767,1.243,0.0,0.09,23.16,560.306,841.948,59.563,0.0,0.0,96.178,0.012,0.152
+p2c,P2C,0.0,2.813,1380.867,3031.0,4129.767,1515.967,,,395.487,96.767,1.19,0.0,0.045,88.755,106.54,613.343,90.27,0.0,0.0,120.979,0.012,0.072
+session_affinity,Session Affinity,0.0,2.753,1315.1,3512.367,4261.1,1523.6,,,389.597,96.767,1.92,0.0,0.11,32.223,585.595,20.122,34.5,0.0,0.0,66.047,0.012,0.178
+prefix_affinity,Prefix Affinity,0.0,2.98,1073.3,2916.667,5086.833,1306.433,,,177.473,96.767,10.11,0.0,0.026,69.681,194.921,312.143,88.255,0.0,0.0,31.322,0.012,2.408
+load_cache_aware,LCA,0.0,2.93,965.933,2743.533,4364.167,1155.1,,,13.917,96.767,100.0,0.0,0.249,66.257,793.758,1632.568,114.822,0.0,0.0,0.254,0.012,0.0

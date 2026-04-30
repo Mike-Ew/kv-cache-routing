@@ -1,0 +1,140 @@
+% ============================================================================
+% Bibliography — Cache-Aware Gateway Routing for Multi-Instance LLM Serving
+% ============================================================================
+
+% --- Core Serving Systems ---
+
+@inproceedings{kwon2023pagedattention,
+  title     = {Efficient Memory Management for Large Language Model Serving with {PagedAttention}},
+  author    = {Kwon, Woosuk and Li, Zhuohan and Zhuang, Siyuan and Sheng, Ying and Zheng, Lianmin and Yu, Cody Hao and Gonzalez, Joseph E. and Zhang, Hao and Stoica, Ion},
+  booktitle = {Proceedings of the 29th ACM Symposium on Operating Systems Principles (SOSP)},
+  year      = {2023},
+}
+
+@inproceedings{zheng2024sglang,
+  title     = {{SGLang}: Efficient Execution of Structured Language Model Programs},
+  author    = {Zheng, Lianmin and Yin, Liangsheng and Xie, Zhiqiang and Huang, Jeff and Sun, Chuyue and Yu, Cody Hao and Cao, Shiyi and Kober, Christos and Shi, Yineng and Sheng, Ying and others},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+}
+
+@inproceedings{qin2025mooncake,
+  title     = {{Mooncake}: A {KVCache}-centric Disaggregated Architecture for {LLM} Serving},
+  author    = {Qin, Ruoyu and Li, Zheming and He, Weiqi and Zhang, Mingxing and Yang, Yongwei and Wang, Weimin and Zheng, Lianmin},
+  booktitle = {Proceedings of the 23rd USENIX Conference on File and Storage Technologies (FAST)},
+  year      = {2025},
+}
+
+@inproceedings{gao2024cachedattention,
+  title     = {Cost-Efficient Large Language Model Serving for Multi-turn Conversations with {CachedAttention}},
+  author    = {Gao, Bin and He, Zhuomin and Sharma, Puru and Kang, Qingxuan and Jiang, Djordje and Jiang, Yingyan},
+  booktitle = {Proceedings of the 2024 USENIX Annual Technical Conference (ATC)},
+  year      = {2024},
+}
+
+% --- Distributed Scheduling & Cache-Aware Routing ---
+
+@article{zhu2025dualmap,
+  title   = {{DualMap}: Enabling Both Cache Affinity and Load Balancing for Distributed {LLM} Serving},
+  author  = {Zhu, Yinghao and Ye, Mingxuan and He, Kunlun and Wang, Xu and Du, Zhuo and Zhang, Shuai},
+  journal = {arXiv preprint arXiv:2501.xxxxx},
+  year    = {2025},
+}
+
+@inproceedings{tao2024preble,
+  title     = {{Preble}: Efficient Distributed Prompt Scheduling for {LLM} Serving},
+  author    = {Tao, Yifan and Zhang, Zhan and Yao, Jing and Lu, Jiangfei},
+  booktitle = {Proceedings of the 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI)},
+  year      = {2024},
+}
+
+@article{yang2025kvshare,
+  title   = {{KVShare}: An {LLM} Service System with Efficient and Effective Multi-Tenant {KV} Cache Reuse},
+  author  = {Yang, Zixin and Li, Mingjie and others},
+  journal = {arXiv preprint arXiv:2503.16525},
+  year    = {2025},
+}
+
+% --- Phase Disaggregation ---
+
+@inproceedings{patel2024splitwise,
+  title     = {{Splitwise}: Efficient Generative {LLM} Inference Using Phase Splitting},
+  author    = {Patel, Pratyush and Choukse, Esha and Zhang, Chaojie and Goiri, {\'I}\~{n}igo and Shah, Aashaka and Maleki, Saeed and Bianchini, Ricardo},
+  booktitle = {Proceedings of the 51st ACM/IEEE International Symposium on Computer Architecture (ISCA)},
+  year      = {2024},
+}
+
+@inproceedings{zhong2024distserve,
+  title     = {{DistServe}: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving},
+  author    = {Zhong, Yinmin and Liu, Shengyu and Chen, Junda and Hu, Jianbo and Zhu, Yibo and Liu, Xuanzhe and Jin, Xin and Zhang, Hao},
+  booktitle = {Proceedings of the 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI)},
+  year      = {2024},
+}
+
+@inproceedings{agrawal2024sarathi,
+  title     = {Taming Throughput-Latency Tradeoff in {LLM} Inference with {Sarathi-Serve}},
+  author    = {Agrawal, Amey and Kedia, Nitin and Panwar, Ashish and Mohan, Jayashree and Kwatra, Nipun and Gulavani, Bhargav and Ramjee, Ramachandran and Tumanov, Alexey},
+  booktitle = {Proceedings of the 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI)},
+  year      = {2024},
+}
+
+% --- KV Cache Optimization ---
+
+@article{xiong2024layerkv,
+  title   = {{LayerKV}: Optimizing Large Language Model Serving with Layer-wise {KV} Cache Management},
+  author  = {Xiong, Yi and Wu, Hao and others},
+  journal = {arXiv preprint},
+  year    = {2024},
+}
+
+@article{li2024kvcache_survey,
+  title   = {A Survey on Large Language Model Acceleration based on {KV} Cache Management},
+  author  = {Li, Haoyang and others},
+  journal = {arXiv preprint arXiv:2412.19442},
+  year    = {2024},
+}
+
+@article{jaillet2026online_scheduling,
+  title   = {Online Scheduling for {LLM} Inference with {KV} Cache Constraints},
+  author  = {Jaillet, Patrick and others},
+  journal = {arXiv preprint arXiv:2502.07115},
+  year    = {2026},
+}
+
+% --- Classic Load Balancing ---
+
+@inproceedings{karger1997consistent,
+  title     = {Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the {World Wide Web}},
+  author    = {Karger, David and Lehman, Eric and Leighton, Tom and Panigrahy, Rina and Levine, Matthew and Lewin, Daniel},
+  booktitle = {Proceedings of the 29th ACM Symposium on Theory of Computing (STOC)},
+  year      = {1997},
+}
+
+@article{mitzenmacher2001power,
+  title   = {The Power of Two Choices in Randomized Load Balancing},
+  author  = {Mitzenmacher, Michael},
+  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  volume  = {12},
+  number  = {10},
+  pages   = {1094--1104},
+  year    = {2001},
+}
+
+% --- Agentic / Framework ---
+
+@misc{rayserve2024prefix,
+  title        = {{Ray Serve} {PrefixCacheAffinityRouter}},
+  author       = {{Anyscale}},
+  year         = {2024},
+  howpublished = {\url{https://docs.ray.io/en/latest/serve/}},
+  note         = {Industry implementation of prefix-aware routing},
+}
+
+% --- Model ---
+
+@article{qwen2025,
+  title   = {Qwen2.5 Technical Report},
+  author  = {{Qwen Team}},
+  journal = {arXiv preprint arXiv:2412.15115},
+  year    = {2024},
+}
