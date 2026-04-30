@@ -1,0 +1,23 @@
+\begin{table}[H]
+    \caption{Policy comparison on ShareGPT multi-turn chat workload (mean $\pm$ std across 3 trials). Cache hit rate and load imbalance are measured from vLLM Prometheus metrics. \textbf{Bold} indicates best in category.}
+    \label{tab:exp1}
+    \centering
+    \small
+    \resizebox{\linewidth}{!}{%
+    \begin{tabular}{@{}llcccc@{}}
+        \toprule
+        \textbf{Type} & \textbf{Policy} & \textbf{vLLM TTFT (ms)} & \textbf{Cache Hit (\%)} & \textbf{Load Imbal.} & \textbf{P95 Lat. (ms)} \\
+        \midrule
+        \multirow{3}{*}{Load-only}
+        & Round-Robin     & $803.7 \pm 196$  & $67.9 \pm 2.0$ & $\mathbf{1.00}$ & $3074$ \\
+        & JSQ             & $784.5 \pm 53$   & $94.1 \pm 0.2$ & $1.05$          & $3121$ \\
+        & P2C             & $905.6 \pm 149$  & $97.4 \pm 0.7$ & $1.15$          & $3133$ \\
+        \midrule
+        \multirow{3}{*}{Cache-aware}
+        & Session Affin.  & $862.4 \pm 84$   & $\mathbf{98.5} \pm 0.3$ & $1.48$   & $3103$ \\
+        & Prefix-Key Aff. & $823.8 \pm 53$   & $98.4 \pm 0.1$ & $1.36$          & $3119$ \\
+        & Load+Cache (LCA) & $986.8 \pm 145$ & $98.3 \pm 0.8$ & $\mathbf{1.21}$ & $3221$ \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}

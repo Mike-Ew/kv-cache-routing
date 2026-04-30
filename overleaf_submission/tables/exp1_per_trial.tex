@@ -1,0 +1,35 @@
+\begin{table}[h]
+    \caption{Per-trial results for Experiment~1 (ShareGPT multi-turn chat). Each row is one trial (fixed seed), one policy. TTFT and cache hit rate from vLLM Prometheus metrics.}
+    \label{tab:per_trial}
+    \centering
+    \small
+    \begin{tabular}{@{}llccccc@{}}
+        \toprule
+        \textbf{Policy} & \textbf{Trial} & \textbf{Requests} & \textbf{TTFT (ms)} & \textbf{Cache Hit (\%)} & \textbf{Imbalance} & \textbf{P95 (ms)} \\
+        \midrule
+        Round-Robin     & 0 & 144 & 550.5 & 70.8 & 1.00 & 3065 \\
+        Round-Robin     & 1 & 155 & 1030.2 & 66.1 & 1.01 & 3023 \\
+        Round-Robin     & 2 & 158 & 830.3 & 66.8 & 1.00 & 3134 \\
+        \midrule
+        JSQ             & 0 & 144 & 713.3 & 94.3 & 1.03 & 3093 \\
+        JSQ             & 1 & 155 & 806.7 & 93.8 & 1.09 & 3137 \\
+        JSQ             & 2 & 158 & 833.5 & 94.3 & 1.03 & 3134 \\
+        \midrule
+        P2C             & 0 & 144 & 1045.7 & 96.4 & 1.15 & 3147 \\
+        P2C             & 1 & 155 & 704.6 & 97.4 & 1.21 & 3124 \\
+        P2C             & 2 & 158 & 966.5 & 98.3 & 1.08 & 3129 \\
+        \midrule
+        Session Aff.    & 0 & 144 & 918.5 & 98.8 & 1.57 & 3084 \\
+        Session Aff.    & 1 & 155 & 738.0 & 98.0 & 1.31 & 3144 \\
+        Session Aff.    & 2 & 158 & 930.8 & 98.7 & 1.55 & 3083 \\
+        \midrule
+        Prefix-Key Aff. & 0 & 144 & 870.9 & 98.2 & 1.72 & 3125 \\
+        Prefix-Key Aff. & 1 & 155 & 744.7 & 98.6 & 1.12 & 3104 \\
+        Prefix-Key Aff. & 2 & 158 & 855.7 & 98.3 & 1.23 & 3124 \\
+        \midrule
+        Load+Cache (LCA) & 0 & 144 & 887.3 & 97.1 & 1.44 & 3234 \\
+        Load+Cache (LCA) & 1 & 155 & 1203.8 & 98.9 & 1.18 & 3181 \\
+        Load+Cache (LCA) & 2 & 158 & 869.4 & 98.8 & 1.00 & 3249 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
